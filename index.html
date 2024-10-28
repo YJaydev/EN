@@ -59,7 +59,34 @@
     })();
   </script>
 
-    
+    <script>var img1 = "images/clients_1.png"
+        var img2 = "images/Clients_2.png"
+        var img3 = "images/clients_1.png"
+      
+      function back() {
+        var page = document.getElementById("page_1");
+        
+        if (page.src == img3) {
+          page.src = img2;
+        } else if (page.src == img2) {
+          page.src = img1;
+        } else if (page.src == img1) {
+          page.src = img3;
+        }
+      }
+      
+      function forward() {
+        var page = document.getElementById("page_1");
+        
+        if (page.src == img1) {
+          page.src = img2;
+        }else if (page.src == img2) {
+          page.src = img3;
+        }else if (page.src == img3) {
+          page.src = img1;
+        }
+    }
+        </script>
 
 
     
@@ -748,36 +775,7 @@ font-display: swap;
 
 
     <!-- OWN IMAGES ARE HERE -->
-<script>
-    var img1 = "images/clients_1.png"
-    var img2 = "images/Clients_2.png"
-    var img3 = "images/clients_1.png"
-  
-  function back() {
-    var page = document.getElementById("page_1");
-    
-    if (page.src == img3) {
-      page.src = img2;
-    } else if (page.src == img2) {
-      page.src = img1;
-    } else if (page.src == img1) {
-      page.src = img3;
-    }
-  }
-  
-  function forward() {
-    var page = document.getElementById("page_1");
-    
-    if (page.src == img1) {
-      page.src = img2;
-    }else if (page.src == img2) {
-      page.src = img3;
-    }else if (page.src == img3) {
-      page.src = img1;
-    }
-}
-    
-    </script>
+
   
 
     <button data-testid="prevButton" aria-label="Previous" class="XvQ3FE CdshHv" onclick="back()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 41"><path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path></svg></button>
