@@ -59,11 +59,11 @@
     })();
   </script>
 
-    <script>var img1 = "images/clients_1.png"
+    <script>
+      (function back() {var img1 = "images/clients_1.png"
         var img2 = "images/Clients_2.png"
         var img3 = "images/clients_1.png"
       
-      function back() {
         var page = document.getElementById("page_1");
         
         if (page.src == img3) {
@@ -73,9 +73,14 @@
         } else if (page.src == img1) {
           page.src = img3;
         }
-      }
+      })(); </script>
+
+<script>
       
-      function forward() {
+     ( function forward() {var img1 = "images/clients_1.png"
+        var img2 = "images/Clients_2.png"
+        var img3 = "images/clients_1.png"
+      
         var page = document.getElementById("page_1");
         
         if (page.src == img1) {
@@ -85,7 +90,7 @@
         }else if (page.src == img3) {
           page.src = img1;
         }
-    }
+    })();
         </script>
 
 
