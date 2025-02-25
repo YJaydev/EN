@@ -681,7 +681,14 @@ font-display: swap;
         <input type="email" name="email" required>
         <textarea name="message" required></textarea> -->
         <input type="hidden" name="redirect" value="https://www.cloudpipeinc.ca/join_our_team">
-        <button style="font-size:14px; color:#f9faf8; font-weight:bold;" type="submit" aria-disabled="false" data-testid="buttonElement" class="uDW_Qe wixui-button PlZyDq" alt="" onclick="myAlert()" > Apply</button>
+        <button style="font-size:14px; color:#f9faf8; font-weight:bold;" type="submit" aria-disabled="false" data-testid="buttonElement" class="uDW_Qe wixui-button PlZyDq" alt="" onclick="myAlert()" >Apply</button>
+        <div id="overlay"></div>
+    <div id="popupDialog">
+        <p>You have successfully sent an email to team. We will contact you soon...</p>
+        <button onclick="closeAlert()">
+            Close
+        </button>
+    </div>
     
     </form>
     <!-- <form action="https//:api.web3forms.com/submit" method="POST" id="comp-l5bfy0dm" class="JVi7i2 comp-l5bfy0dm wixui-form">
@@ -871,9 +878,24 @@ font-display: swap;
     <script>
 
     function myAlert() {
-  alert("message successfully sent");
-  window.location.reload();
+//   alert("message successfully sent");
+        document.getElementById(
+                "overlay"
+            ).style.display = "block";
+            document.getElementById(
+                "popupDialog"
+            ).style.display = "block";
+        window.location.reload();
 }
+
+function closeAlert() {
+            document.getElementById(
+                "overlay"
+            ).style.display = "none";
+            document.getElementById(
+                "popupDialog"
+            ).style.display = "none";
+        }
 </script>
 
 
