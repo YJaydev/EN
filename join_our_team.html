@@ -681,14 +681,16 @@ font-display: swap;
         <input type="email" name="email" required>
         <textarea name="message" required></textarea> -->
         <input type="hidden" name="redirect" value="https://www.cloudpipeinc.ca/join_our_team">
-        <button style="font-size:14px; color:#f9faf8; font-weight:bold;" type="submit" aria-disabled="false" data-testid="buttonElement" class="uDW_Qe wixui-button PlZyDq" alt="" onclick="myAlert()" >Apply</button>
-        <div id="overlay"></div>
-    <div id="popupDialog">
+        <button style="font-size:14px; color:#f9faf8; font-weight:bold;" type="submit" aria-disabled="false" data-testid="buttonElement" class="uDW_Qe wixui-button PlZyDq" alt="" onclick="openPopup()" >Apply</button>
+
+        <div id="popup" style="  position: absolute;width: 300px;z-index: 999;display: none;top:0;background-color: #fff;  border: 1px solid #ddd;  border-radius: 5px;  box-shadow: 0 2px 8px #aaa;  overflow: hidden;   padding: 10px;"><div class="popup_body" style="  height: 100px;">Thanks for submission</div><button class="close_button"onClick="closePopup()">close</button</div>
+        <!-- <div style="font-size:14px; color:#f9faf8; font-weight:bold;" id="overlay"></div>
+        <div style="font-size:14px; color:#386e01; font-weight:bold;" id="popupDialog">
         <p>You have successfully sent an email to team. We will contact you soon...</p>
         <button onclick="closeAlert()">
             Close
         </button>
-    </div>
+        </div> -->
     
     </form>
     <!-- <form action="https//:api.web3forms.com/submit" method="POST" id="comp-l5bfy0dm" class="JVi7i2 comp-l5bfy0dm wixui-form">
@@ -896,6 +898,20 @@ function closeAlert() {
                 "popupDialog"
             ).style.display = "none";
         }
+
+        function openPopup() {
+  var el = document.getElementById('popup');
+  el.style.display = 'block';
+  
+  // Updates: set window background color black
+  document.body.style.background = '#353333';
+}
+
+function closePopup() {
+  var el = document.getElementById('popup');
+  el.style.display = 'none';
+  document.body.style.background = 'white';
+}
 </script>
 
 
